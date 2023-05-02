@@ -14,6 +14,18 @@ services:
     volumes:
       - thisdb:/var/www/html
 
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
+    image: jenkins
+    ports:
+      - "8080:8080"
+    networks:
+      - default
+    volumes:
+      - thisdb:/var/www/html
+
   db:
     image: mysql:latest
     ports:
