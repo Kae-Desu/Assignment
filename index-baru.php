@@ -41,9 +41,12 @@
                         <td><?= $row['position'] ?></td>
                     </tr>
                     <?php
+                    $count = $count + 1;
                 }
+                echo "<h1>patch redlock 2.1</h1>"
+                echo "<p>changelog: add count</p>"
+                echo "<h1>Total: {$count}</h1>";
             ?>
         <bodyt>
     </table>
 </body>
-

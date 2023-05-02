@@ -1,4 +1,6 @@
 version: '3.1'
+volumes:
+  thisdb:
 services:
   www:
     build: .
@@ -9,6 +11,8 @@ services:
       - db
     networks:
       - default
+    volumes:
+      - thisdb:/var/www/html
 
   db:
     image: mysql:latest
